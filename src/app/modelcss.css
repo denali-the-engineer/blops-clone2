@@ -1,0 +1,14 @@
+
+
+
+@keyframes ringIncrease {
+    0% {
+        scale: 0.1;
+    } 100% {
+        scale: 2;
+    }
+}
+
+.ringClass {
+    scale: 2;
+}

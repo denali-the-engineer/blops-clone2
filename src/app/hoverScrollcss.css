@@ -1,0 +1,27 @@
+.hoverAnimClass {
+    color: white;
+    height: 20px;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "Geist-Mono";
+    src: url("../../public/fonts/GeistMono-VariableFont_wght.ttf") format("truetype");
+}
+
+.char {
+display: inline-block;
+white-space: pre;
+transform: translateY(-1.5px); /* Explicit initial state */
+transition: transform 0.3s ease;
+transition-delay: var(--delay); /* Use dynamic delay */
+font-family: "Geist-Mono";
+font-weight: 500;
+font-size: 12px;
+margin: 0;
+padding: 0;
+}
+
+.hoverAnimClass:hover .char {
+transform: translateY(-18px);
+}

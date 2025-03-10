@@ -1,0 +1,203 @@
+.fadeInClass {
+    animation-name: fadeInAnim;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* Keeps final state after animation */
+    opacity: 0; /* Start hidden */
+}
+
+.fadeInClassLeftAngle {
+    animation-name: fadeInAnim;
+    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* Keeps final state after animation */
+    opacity: 0; /* Start hidden */
+    transform: translateX(0px);
+}
+
+@keyframes fadeInAnim {
+    0% {
+        opacity: 0; /* Corrected from 0s */
+    }
+    100% {
+        opacity: 1; /* Corrected from 1s */
+    }
+}
+
+@keyframes fadeInAnimLeft {
+    0% {
+        opacity: 0; /* Corrected from 0s */
+        transform: translateX(250px);
+    }
+    100% {
+        opacity: 1; /* Corrected from 1s */
+        transform: translateX(0px);
+    }
+}
+
+.saturate {
+    filter: saturate(0);
+    transition: filter 0.25s ease-in-out;
+
+}
+
+.saturate:hover {
+    filter: saturate(1)
+}
+
+.rectangles {
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: border 0.25s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.rectangles:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.rectangles2 {
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: border 0.25s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.rectangles2:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.connectWalletButton {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border 0.25s ease-in-out;
+    transition: scale 0.25s ease-in-out;
+}
+
+.connectWalletButton:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.connectWalletButton:active {
+    scale: 0.98;
+}
+
+.selectionCircle {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border 0.25 ease-in-out;
+}
+
+.selectionCircle:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rectangles2:hover .selectionCircle{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gridLeft {
+    padding-right: 20px;
+    height: 392px
+}
+
+.gridRight {
+    padding-left: 20px;
+    height: 392px
+}
+
+.gridLeftGraph {
+    padding-top: 20px;
+    padding-right: 20px
+}
+
+.eventHover { 
+    transition: scale 0.5s ease-in-out;
+    color: rgb(255, 255, 255)
+}
+
+.eventHover:hover{
+    background-color: white;
+    color: black;
+    scale: 1.05;
+}
+
+.gridRightGraph {
+    padding-top: 20px;
+    padding-left: 20px
+}
+
+.viewAssets {
+    color: gray;
+    transition: color 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.viewAssets:hover {
+    color: white
+}
+
+.restOfEverything {
+    width: min(90%, 1500px);
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 2800px;
+    margin-top: 730px;
+}
+
+.connectWalletButtonFooter {
+    width: min(35%, 200px);
+    color: black;
+    height: 55px;
+    background-color: white;
+}
+
+.disclaimerText {
+    color: gray;
+    text-align: center;
+    font-size: min(12px, 2vw);
+    margin-top: 30px;
+    width: 70%;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%)
+}
+
+/* 
+This section is for resizing, I am using grid to change the organization of
+components, but the CSS still must be modified in order to make it look good.
+The xs={} grid tag (deprecated) changes the organization of the components when
+the window width is <= 899px. 
+*/
+@media (max-width: 899px) { 
+    .disclaimerText {
+        width: 95%
+    }
+    .gridLeft {
+        padding-right: 0px;
+        padding-top: 150px;
+        height: 542px;
+    }
+    .gridRight {
+        padding-left: 0px;
+        padding-top: 20px;
+        height: 412px;  
+    }
+    .gridLeftGraph {
+        padding-right: 0px;
+        height: 200px;
+    }
+    .gridRightGraph {
+        padding-left: 0px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        height: 200px
+    }
+    .restOfEverything{
+        margin-top: 1320px;
+    }
+}
