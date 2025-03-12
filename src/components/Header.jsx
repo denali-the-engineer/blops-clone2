@@ -30,7 +30,7 @@ export default function Header() {
 
     return (
         <div style={{top: 0, left: 0}}>
-            <div className="fadeInClassLeftAngle" style={{width: "100%", height: "80px", background: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%)", position: "fixed", zIndex: 10000, top: 0, left: 0}}>
+            <div className="fadeInClassLeftAngle" style={{width: "100%", height: "80px", background: "linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(255,255,255,0) 100%)", position: "fixed", zIndex: 10000, top: 0, left: 0}}>
                     
                     <a href="/">
                         <div style={{marginLeft: windowWidth < 450 ? 15 : 40, marginTop: 28}}>
