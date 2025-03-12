@@ -167,6 +167,46 @@
     transform: translateX(-50%)
 }
 
+.scrollingAnimationClass {
+    transform: translateX(0px);
+    animation: scroll 75s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0px);
+    } 100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrollingAnimationClass2 {
+    transform: translateX(100%);
+    animation: scroll2 75s linear infinite;
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(100%);
+    } 100% {
+        transform: translateX(0%);
+    }
+}
+
+.scrollingAnimationClass3 {
+    transform: translateX(200%);
+    animation: scroll3 75s linear infinite;
+}
+
+@keyframes scroll3 {
+    0% {
+        transform: translateX(200%);
+    } 100% {
+        transform: translateX(100%);
+    }
+}
+
+
 /* 
 This section is for resizing, I am using grid to change the organization of
 components, but the CSS still must be modified in order to make it look good.
