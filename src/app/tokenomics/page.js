@@ -10,7 +10,7 @@ import "../fadeinAnim.css"
 import { FlightTakeoffSharp } from "@mui/icons-material";
 import Footer from "@/components/Footer";
 import HeaderNoFadeIn from "@/components/HeaderNoFadeIn"
-
+import BottomScroller from "@/components/bottomScroller";
 
 export default function TokenomicsPage() {
     const trasuriesData = [{
@@ -52,7 +52,7 @@ export default function TokenomicsPage() {
 
     return (
         <>
-
+            <BottomScroller/>
             { connectWallet ?
                     <div style={{position: "fixed", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "red", width: "100%", height: "100%", zIndex: 10000000, backgroundColor: "rgba(0, 0, 0, 0.2)", backdropFilter: "blur(2px)"}}>
                         <div style={{width: 360, height: 500, backgroundColor: "rgb(8, 8, 8)"}}>
