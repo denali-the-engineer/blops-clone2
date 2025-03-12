@@ -13,6 +13,7 @@ import { Surface, Area, Layer, PieChart, Pie, Cell, Text, Rectangle, AreaChart, 
 import { alignProperty } from '@mui/material/styles/cssUtils';
 import zIndex from '@mui/material/styles/zIndex';
 import Footer from '@/components/Footer';
+import BottomScroller from '@/components/bottomScroller';
 
 const Scene = dynamic(() => import('@/components/Scene/SceneSetup'), {
   ssr: false,
@@ -149,7 +150,8 @@ export default function Home() {
 
   return (
     <main className={styles.main} style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-      
+        
+        <BottomScroller/>
 
         <Drawer style={{zIndex: 100000000}}
           anchor="right"
@@ -532,6 +534,8 @@ export default function Home() {
           </Grid>
         </Grid>
 
+
+
         <Grid container style={{width: "min(90%, 1500px)", marginLeft: "50%", height: 50, marginTop: 200, transform: "translate(-50%, 0px)"}}>
             <Grid style={{color: "white", fontSize: 30}} xs={12} md={12} xl={12} item >
               Top 100 AI Coins On Solana
@@ -885,7 +889,6 @@ export default function Home() {
           </Grid2>
           <Footer setModalActivation={setConnectWallet} modalActivation={connectWallet}/>
         </Grid2>
-
       </div>
 
 
