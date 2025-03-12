@@ -10,6 +10,7 @@ import { Surface, BarChart, Bar, Area, Layer, PieChart, Pie, Cell, Rectangle, Ar
 import "../fadeinAnim.css"
 import { FlightTakeoffSharp } from "@mui/icons-material";
 import Footer from "@/components/Footer";
+import BottomScroller from "@/components/bottomScroller";
 
 export default function detailsPage() {
     //<HoverScroll textValue="test one two three"/>
@@ -48,7 +49,7 @@ export default function detailsPage() {
   return (
     <>
       <HeaderNoFadeIn/>
-
+      <BottomScroller/>
 
       { connectWallet ?
           <div style={{position: "fixed", marginTop: -80, display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "red", width: "100%", height: "100%", zIndex: 10000000000000000, backgroundColor: "rgba(0, 0, 0, 0.2)", backdropFilter: "blur(2px)"}}>
